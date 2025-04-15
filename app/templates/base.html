@@ -3,44 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <title>Analiza Opinii</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
+        * {
+            box-sizing: border-box;
+        }
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(to right, #f8f9fa, #e3eaf0);
+            color: #333;
         }
         nav {
-            background-color: #333;
-            color: white;
-            padding: 15px;
+            background: #1e3c72;
+            background: linear-gradient(to right, #2a5298, #1e3c72);
+            padding: 20px 40px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
         }
         nav ul {
             list-style: none;
             display: flex;
-            gap: 20px;
-        }
-        nav ul li {
-            display: inline;
+            gap: 30px;
+            margin: 0;
+            padding: 0;
         }
         nav ul li a {
             color: white;
             text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #ffd700;
         }
         .container {
-            padding: 30px;
-            max-width: 900px;
-            margin: auto;
-            background-color: white;
-            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-            margin-top: 30px;
-            border-radius: 10px;
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 40px;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
         }
-        h1, h2 {
-            color: #333;
+        h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            color: #1e3c72;
+        }
+        h2 {
+            color: #2a5298;
+            margin-top: 30px;
+        }
+        p, li {
+            line-height: 1.6;
+            font-size: 16px;
         }
         ul {
             padding-left: 20px;
+        }
+        footer {
+            text-align: center;
+            margin: 50px 0 20px;
+            color: #666;
+            font-size: 14px;
         }
     </style>
 </head>
@@ -57,29 +83,33 @@
 
     <div class="container">
         <h1>Witamy w aplikacji do analizy opinii</h1>
+        <p>Dowiedz się, co użytkownicy naprawdę myślą o Twoich produktach.</p>
 
-        <h2>Cel aplikacji</h2>
-        <p>Aplikacja umożliwia analizę opinii użytkowników na temat różnych produktów.</p>
+        <h2>🎯 Cel aplikacji</h2>
+        <p>Aplikacja służy do analizy opinii użytkowników na temat różnych produktów. Umożliwia przetwarzanie, klasyfikowanie i wizualizację opinii w przystępny sposób.</p>
 
-        <h2>Opis działania</h2>
-        <p>Użytkownik może wczytać plik z opiniami, które zostaną przetworzone i przedstawione w przystępnej formie.</p>
+        <h2>⚙️ Opis działania</h2>
+        <p>Użytkownik wczytuje plik z opiniami. Dane są analizowane pod kątem sentymentu, czyszczone, a następnie prezentowane w formie listy, wykresów i statystyk.</p>
 
-        <h2>Zastosowane biblioteki</h2>
+        <h2>🛠️ Zastosowane biblioteki</h2>
         <ul>
-            <li>pandas</li>
-            <li>scikit-learn</li>
-            <li>Flask / Django</li>
-            <li>Matplotlib / Plotly</li>
+            <li><strong>pandas</strong> – analiza danych</li>
+            <li><strong>scikit-learn</strong> – modele uczenia maszynowego</li>
+            <li><strong>Flask / Django</strong> – backend aplikacji</li>
+            <li><strong>Matplotlib / Plotly</strong> – wizualizacja danych</li>
         </ul>
 
-        <h2>Zastosowane podejścia</h2>
+        <h2>📌 Zastosowane podejścia</h2>
         <ul>
             <li>Analiza sentymentu</li>
-            <li>Czyszczenie i przetwarzanie danych tekstowych</li>
+            <li>Czyszczenie danych tekstowych</li>
             <li>Interaktywna prezentacja wyników</li>
         </ul>
     </div>
 
+    <footer>
+        © 2025 Aplikacja do Analizy Opinii – Wszelkie prawa zastrzeżone
+    </footer>
+
 </body>
 </html>
-
