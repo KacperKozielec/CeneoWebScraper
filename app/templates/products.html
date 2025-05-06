@@ -3,7 +3,29 @@
 Lista Produktów
 {% endblock %}
 {% block content %}
-    <div class="text-center">
-        
-    </div>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Nazwa</th>
+        <th scope="col">Ilość opini</th>
+        <th scope="col">Ilość zalet</th>
+        <th scope="col">Ilość wad</th>
+        <th scope="col">Średnia</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for product in products %}
+      <tr>
+        <th scope="row"><a href="{{ url_for('product', product_id=product.product_id) }}" class="btn btn-primary">{{product.product_id}}</a></th>
+        <td>{{ product.product_name }}</td>
+        <td>{{ product.opinions_count }}</td>
+        <td style="background-color:rgba(0, 255, 0, 0.281);"> {{ product.recommendation_distr.Polecam or 0 }}</td>
+        <td style="background-color:rgba(255, 0, 0, 0.281);">{{ product.recommendation_distr['Nie polecam'] or 0 }}  </td>
+        <td style="background-color:rgba(255, 255, 0, 0.281);"> {{ "%.2f"|format(product.average_stars) }} ★</td>
+      </tr>
+
+      {% endfor %}
+    </tbody>
+  </table>
 {% endblock %}
