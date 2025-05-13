@@ -15,6 +15,8 @@ def extract_data():
 
 @app.route('/extract', methods=['get'])
 def display_form():
+    url = f"https://www.ceneo.pl/(product_id)#tab=reviews"
+    
     return render_template("extract.html")
 
 @app.route('/products')
